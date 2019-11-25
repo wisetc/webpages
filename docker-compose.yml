@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  webpages:
+    build: .
+    restart: always
+    ports:
+      - "${PORT}:80"
+    volumes: ["${ROOT_DIR}:/usr/share/nginx/html", "${CONF_DIR}:/etc/nginx/conf.d"]
+
